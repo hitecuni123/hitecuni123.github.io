@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Nadeem - Portfolio</title>
+    <title>Ahmed Nadeem - Mobile Developer Portfolio</title>
     <style>
         /* Base Styles */
         :root {
@@ -144,12 +144,12 @@
             transition: all 0.3s ease;
         }
         
-        /* Hero Section */
+        /* Hero Section - Updated */
         .hero {
             height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(126, 125, 125, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1600x900/?technology') center/cover no-repeat;
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.9)), url('https://source.unsplash.com/random/1600x900/?mobile,technology') center/cover no-repeat;
             color: white;
             text-align: center;
         }
@@ -162,13 +162,26 @@
         .hero-content p {
             font-size: 1.5rem;
             margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .hero-content span {
             color: var(--primary-color);
         }
         
-        /* About Section */
+        .hero-tagline {
+            font-size: 1.2rem;
+            background-color: rgba(52, 152, 219, 0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 20px;
+            border: 2px solid var(--primary-color);
+        }
+        
+        /* About Section - Updated */
         .about-content {
             display: flex;
             align-items: center;
@@ -202,7 +215,27 @@
             margin-bottom: 15px;
         }
         
-        /* Skills Section */
+        .highlight-box {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .highlight-box h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .highlight-box h4 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Skills Section - Updated */
         .skills {
             background-color: var(--dark-color);
             color: var(--text-light);
@@ -241,7 +274,7 @@
             margin-bottom: 15px;
         }
         
-        /* Projects Section - FIXED */
+        /* Projects Section - Updated */
         .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -301,6 +334,22 @@
         .project-info p {
             margin-bottom: 15px;
             line-height: 1.5;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        
+        .tech-tag {
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
         }
         
         .project-gallery-btn {
@@ -606,18 +655,21 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Updated -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm <span>Ahmed</span></h1>
-                <p>A passionate Web & App Developer skilled in modern technologies and UI/UX design using Figma. I build clean, responsive, and user-focused digital products.</p>
+                <p>A passionate <strong>Mobile App Developer</strong> specialized in <strong>Flutter</strong> and <strong>Figma UI/UX design</strong>. I build clean, responsive, and user-focused mobile applications for iOS and Android.</p>
+                <div class="hero-tagline">
+                    <i class="fas fa-mobile-alt"></i> Flutter Developer | Figma UI/UX Designer
+                </div>
                 <a href="#projects" class="btn">View My Work</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - Updated -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-title">
@@ -629,16 +681,21 @@
                 </div>
                 <div class="about-text">
                     <h3>Hello! I'm Ahmed Nadeem</h3>
-                    <p>I'm a passionate web and app developer with expertise in creating responsive and user-friendly websites and applications. I love turning complex problems into simple, beautiful designs.</p>
-                    <p>My journey in web development started 3 years ago, and since then I've worked on various projects that have helped me grow my skills and knowledge.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, reading tech blogs, or enjoying outdoor activities.</p>
+                    <p>I'm a passionate <strong>Mobile App Developer</strong> with expertise in <strong>Flutter</strong> and <strong>Figma UI/UX design</strong>. I specialize in creating beautiful, performant cross-platform applications for iOS and Android.</p>
+                    <p>My journey in mobile development started 3 years ago with Flutter, and I've since fallen in love with creating seamless user experiences across platforms. I combine my development skills with UI/UX design principles from Figma to build apps that are not only functional but also aesthetically pleasing.</p>
+                    
+                    <div class="highlight-box">
+                        <h4><i class="fab fa-flutter"></i> Why Flutter & Figma?</h4>
+                        <p>I choose Flutter for its fast development cycle, beautiful UIs, and single codebase for multiple platforms. Combined with Figma for prototyping and design, I can deliver complete mobile solutions from concept to deployment.</p>
+                    </div>
+                    
                     <a href="#contact" class="btn">Get In Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section - Updated -->
     <section class="skills" id="skills">
         <div class="container">
             <div class="section-title">
@@ -646,69 +703,103 @@
             </div>
             <div class="skills-container">
                 <div class="skill-item">
-                    <i class="fas fa-code"></i>
-                    <h3>Frontend Development</h3>
-                    <p>HTML, CSS, JavaScript, React, Flutter</p>
+                    <i class="fab fa-flutter"></i>
+                    <h3>Flutter Development</h3>
+                    <p>Cross-platform mobile apps, State management, Firebase integration</p>
                 </div>
                 <div class="skill-item">
-                    <i class="fas fa-server"></i>
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Express, MongoDB</p>
+                    <i class="fab fa-figma"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Figma prototyping, User research, Design systems, Wireframing</p>
                 </div>
                 <div class="skill-item">
                     <i class="fas fa-mobile-alt"></i>
                     <h3>Mobile Development</h3>
-                    <p>Flutter, React Native, Android</p>
+                    <p>iOS & Android apps, REST APIs, Native device features</p>
                 </div>
                 <div class="skill-item">
                     <i class="fas fa-tools"></i>
                     <h3>Tools & Technologies</h3>
-                    <p>Git, GitHub, VS Code, Figma</p>
+                    <p>Git, GitHub, VS Code, Firebase, Dart, Provider/Bloc</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section - FIXED -->
+    <!-- Projects Section - Updated with Gym Mate -->
     <section class="projects" id="projects">
         <div class="container">
             <div class="section-title">
                 <h2>My Projects</h2>
             </div>
             <div class="projects-container">
-                <!-- Project 1 -->
+                <!-- Project 1: Gym Mate -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="2.jpg" alt="Insight Doc Analyzer Website">
+                        <img src="gym1.jpeg" alt="Gym Mate App">
                     </div>
                     <div class="project-info">
-                        <h3>Insight Document Analyzer Website</h3>
-                        <p>A powerful document analysis system with text extraction, image extraction, and smart summarization, supporting both offline and online modes.</p>
-                        <button class="btn" onclick="openGallery('project1')">View Project</button>
-                        <button class="btn project-gallery-btn" onclick="openGallery('project1')">Gallery</button>
+                        <h3>Gym Mate - Fitness Companion App</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Provider</span>
+                        </div>
+                        <p>A comprehensive fitness tracking app with workout plans, progress tracking, and exercise library. Designed with Figma and built with Flutter.</p>
+                        <button class="btn" onclick="openGallery('project4')">View Project</button>
+                        <button class="btn project-gallery-btn" onclick="openGallery('project4')">Gallery</button>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="3.jpg" alt="Insight Doc Analyzer App">
+                        <img src="2.jpg" alt="Insight Doc Analyzer Website">
                     </div>
                     <div class="project-info">
-                        <h3>Offline Insight Document Analyzer App</h3>
-                        <p>Mobile app for quick text and image extraction from documents with offline functionality and smart summarization.</p>
-                        <button class="btn" onclick="openGallery('project2')">View Project</button>
-                        <button class="btn project-gallery-btn" onclick="openGallery('project2')">Gallery</button>
+                        <h3>Insight Document Analyzer Website</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <p>A powerful document analysis system with text extraction, image extraction, and smart summarization, supporting both offline and online modes.</p>
+                        <button class="btn" onclick="openGallery('project1')">View Project</button>
+                        <button class="btn project-gallery-btn" onclick="openGallery('project1')">Gallery</button>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-img">
+                        <img src="3.jpg" alt="Insight Doc Analyzer App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Offline Insight Document Analyzer App</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                        <p>Mobile app for quick text and image extraction from documents with offline functionality and smart summarization.</p>
+                        <button class="btn" onclick="openGallery('project2')">View Project</button>
+                        <button class="btn project-gallery-btn" onclick="openGallery('project2')">Gallery</button>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-img">
                         <img src="b1.jpg" alt="Baker Base">
                     </div>
                     <div class="project-info">
                         <h3>Baker Base App</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
                         <p>An AI-powered bakery e-commerce app with smart recommendations, cart functionality, and seamless checkout.</p>
                         <button class="btn" onclick="openGallery('project3')">View Project</button>
                         <button class="btn project-gallery-btn" onclick="openGallery('project3')">Gallery</button>
@@ -719,6 +810,50 @@
     </section>
 
     <!-- Project Gallery Modals -->
+    <!-- Project 4 Gallery (Gym Mate) -->
+    <div id="project4-gallery" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeGallery('project4')">&times;</span>
+            <h2 class="gallery-title">Gym Mate - Fitness Companion App</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img class="mobile-screenshot" src="gym1.jpeg" alt="App Home Screen">
+                </div>
+                <div class="gallery-item">
+                    <img class="mobile-screenshot" src="gym2.jpeg" alt="Workout Plans">
+                </div>
+                <div class="gallery-item">
+                    <img class="mobile-screenshot" src="gym3.jpeg" alt="Progress Tracking">
+                </div>
+                <div class="gallery-item">
+                    <img class="mobile-screenshot" src="gym4.jpeg" alt="Exercise Library">
+                </div>
+                <div class="gallery-item">
+                    <img src="gym5.jpeg" alt="Figma Design">
+                </div>
+                <div class="gallery-item">
+                    <video controls class="gallery-video">
+                        <source src="gymvid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="project-description">
+                <h3>Project Details</h3>
+                <p>Gym Mate is a comprehensive fitness application designed with Figma and built with Flutter. The app helps users track workouts, set fitness goals, follow personalized exercise plans, and monitor progress over time. Key features include:</p>
+                <ul>
+                    <li>Personalized workout plans based on fitness goals</li>
+                    <li>Exercise library with detailed instructions and animations</li>
+                    <li>Progress tracking with charts and statistics</li>
+                    <li>Workout timer and rest interval management</li>
+                    <li>Nutrition tracking and calorie counter</li>
+                    <li>Social features to share achievements</li>
+                </ul>
+                <p><strong>Technologies used:</strong> Flutter, Dart, Firebase, Provider State Management, Figma (UI/UX Design), Google Fit API integration</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Project 1 Gallery (Website) -->
     <div id="project1-gallery" class="modal">
         <div class="modal-content">
@@ -765,9 +900,6 @@
                     <img class="mobile-screenshot" src="insights.jpg" alt="Analysis Results">
                 </div>
                 <div class="gallery-item">
-                    <img class="mobile-screenshot" src="https://source.unsplash.com/random/400x800/?mobile,settings,offline" alt="">
-                </div>
-                <div class="gallery-item">
                     <video controls class="gallery-video">
                         <source src="vid2.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -796,9 +928,6 @@
                 </div>
                 <div class="gallery-item">
                     <img class="mobile-screenshot" src="b3.jpg" alt="Shopping Cart">
-                </div>
-                <div class="gallery-item">
-                    <img class="mobile-screenshot" src="b4.jpg" alt="Checkout Process">
                 </div>
                 <div class="gallery-item">
                     <video controls class="gallery-video">
@@ -876,6 +1005,7 @@
                 <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
             <p>&copy; 2023 Ahmed Nadeem. All Rights Reserved.</p>
+            <p><i class="fab fa-flutter"></i> Flutter Developer | <i class="fab fa-figma"></i> Figma UI/UX Designer</p>
         </div>
     </footer>
 
@@ -953,6 +1083,18 @@
                 }
             });
         });
+        
+        // Add Flutter icon CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            .fab.fa-flutter:before {
+                content: "Flutter";
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: bold;
+                color: #02569B;
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
